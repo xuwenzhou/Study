@@ -1,6 +1,5 @@
 package com.xu.concurrency.chapter2;
 
-import javax.servlet.Servlet;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 

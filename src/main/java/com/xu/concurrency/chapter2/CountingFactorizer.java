@@ -1,6 +1,7 @@
 package com.xu.concurrency.chapter2;
 
 import java.math.BigInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -10,34 +11,36 @@ import javax.servlet.ServletResponse;
 
 import com.xu.concurrency.ThreadSafe;
 
-/**
- * 无状态对象永远是线程安全的
- * @author 39767
- *
- */
 @ThreadSafe
-public class StatelessFactorizer implements Servlet {
+public class CountingFactorizer implements Servlet {
+	private final AtomicLong count = new AtomicLong();
 
-	public void service(ServletRequest req, ServletResponse resp){
+	public long getCount() {
+		return this.count.get();
+	}
+	
+	public void service(ServletRequest req, ServletResponse resp) {
 		BigInteger i = extractFromRequest(req);
-		BigInteger[] factors = factor(i);
+		BigInteger[] factors = factory(i);
+		//自增并返回结果
+		count.incrementAndGet();
 		encodeIntoResponse(resp, factors);
+	}
+
+	private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private BigInteger[] factory(BigInteger i) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private BigInteger extractFromRequest(ServletRequest req) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	private BigInteger[] factor(BigInteger i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
-		// TODO Auto-generated method stub
-		
-	}	
 
 	@Override
 	public void destroy() {
@@ -62,5 +65,4 @@ public class StatelessFactorizer implements Servlet {
 		// TODO Auto-generated method stub
 		
 	}
-
 }
