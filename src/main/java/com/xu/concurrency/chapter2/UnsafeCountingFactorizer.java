@@ -11,7 +11,7 @@ import com.xu.concurrency.NotThreadSafe;
  *
  */
 @NotThreadSafe
-public class UnsafeCountingFactorizer {
+public class UnsafeCountingFactorizer extends Chapter2Base {
 	private long count = 0L;
 	
 	public long getCount(){

@@ -9,7 +9,7 @@ import javax.servlet.ServletResponse;
 import com.xu.concurrency.NotThreadSafe;
 
 @NotThreadSafe
-public class UnsafeCachingFactorizer {
+public class UnsafeCachingFactorizer extends Chapter2Base {
 	private final AtomicReference<BigInteger> lastNumber = new AtomicReference<>();
 	private final AtomicReference<BigInteger[]> lastFactors = new AtomicReference<>();
 	
@@ -25,20 +25,5 @@ public class UnsafeCachingFactorizer {
 			lastFactors.set(factors);
 			encodeIntoResponse(resp, factors);
 		}
-	}
-
-	private BigInteger extractFromRequest(ServletRequest req) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private BigInteger[] factory(BigInteger i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
-		// TODO Auto-generated method stub
-		
 	}
 }

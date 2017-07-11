@@ -12,7 +12,7 @@ import javax.servlet.ServletResponse;
 import com.xu.concurrency.ThreadSafe;
 
 @ThreadSafe
-public class CountingFactorizer implements Servlet {
+public class CountingFactorizer extends Chapter2Base implements Servlet {
 	private final AtomicLong count = new AtomicLong();
 
 	public long getCount() {
@@ -25,21 +25,6 @@ public class CountingFactorizer implements Servlet {
 		//自增并返回结果
 		count.incrementAndGet();
 		encodeIntoResponse(resp, factors);
-	}
-
-	private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private BigInteger[] factory(BigInteger i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private BigInteger extractFromRequest(ServletRequest req) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override

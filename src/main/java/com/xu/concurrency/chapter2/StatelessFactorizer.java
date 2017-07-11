@@ -16,28 +16,13 @@ import com.xu.concurrency.ThreadSafe;
  *
  */
 @ThreadSafe
-public class StatelessFactorizer implements Servlet {
+public class StatelessFactorizer extends Chapter2Base implements Servlet {
 
 	public void service(ServletRequest req, ServletResponse resp){
 		BigInteger i = extractFromRequest(req);
-		BigInteger[] factors = factor(i);
+		BigInteger[] factors = factory(i);
 		encodeIntoResponse(resp, factors);
 	}
-
-	private BigInteger extractFromRequest(ServletRequest req) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private BigInteger[] factor(BigInteger i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
-		// TODO Auto-generated method stub
-		
-	}	
 
 	@Override
 	public void destroy() {
