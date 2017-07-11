@@ -8,6 +8,11 @@ import javax.servlet.ServletResponse;
 
 import com.xu.concurrency.NotThreadSafe;
 
+/**
+ * 2.3.0 锁-多状态变量处理
+ * @author 39767
+ *
+ */
 @NotThreadSafe
 public class UnsafeCachingFactorizer extends Chapter2Base {
 	private final AtomicReference<BigInteger> lastNumber = new AtomicReference<>();

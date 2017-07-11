@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import com.xu.concurrency.ThreadSafe;
 
 /**
- * 无状态对象永远是线程安全的
+ * 2.1.1 无状态对象永远是线程安全的
  * @author 39767
  *
  */

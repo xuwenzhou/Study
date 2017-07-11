@@ -6,7 +6,7 @@ import javax.servlet.ServletResponse;
 import com.xu.concurrency.NotThreadSafe;
 
 /**
- * 
+ * 2.2.0 原子性
  * @author 39767
  *
  */

@@ -8,6 +8,11 @@ import javax.servlet.ServletResponse;
 import com.xu.concurrency.GuardedBy;
 import com.xu.concurrency.ThreadSafe;
 
+/**
+ * 2.3.1 内部锁
+ * @author 39767
+ *
+ */
 @ThreadSafe
 public class SynchronizedFactorizer extends Chapter2Base {
 	@GuardedBy("this")

@@ -11,6 +11,11 @@ import javax.servlet.ServletResponse;
 
 import com.xu.concurrency.ThreadSafe;
 
+/**
+ * 2.2.3 复合操作
+ * @author 39767
+ *
+ */
 @ThreadSafe
 public class CountingFactorizer extends Chapter2Base implements Servlet {
 	private final AtomicLong count = new AtomicLong();

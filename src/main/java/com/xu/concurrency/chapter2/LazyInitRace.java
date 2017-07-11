@@ -3,7 +3,7 @@ package com.xu.concurrency.chapter2;
 import com.xu.concurrency.NotThreadSafe;
 
 /**
- * 
+ * 2.2.2 懒加载
  * @author 39767
  *
  */
